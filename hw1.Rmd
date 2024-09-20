@@ -1,0 +1,35 @@
+---
+title: "HW 1"
+author: "Wayne Monical"
+date: "2024-09-20"
+output: github_document
+---
+
+Here we load the `penguins` data set from the `palmerpenguins` package.
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
+
+This data set comes in the form of a data frame. It contains data on three different penguin `species`, Adelie, Gentoo, and Chinstrap. The penguins range over three different islands, Torgersen, Biscoe, and Dream, given by the `island` variable. Observations come over three years, 2007 through 2009, given by the `year` variable.
+
+The data describes `r nrow(penguins)` penguin individuals in a total of `r ncol(penguins)` variables. 
+The data includes various physical measures of the penguins, such as their flipper length in millimeters, given by the `flipper_length_mm` variable. This variable has an average value of `r round(mean(penguins$flipper_length_mm, na.rm = TRUE), 2)` in this data set. 
+
+```{r}
+print(unique(penguins$species))
+print(unique(penguins$island))
+print(unique(penguins$year))
+```
+
+
+```{r}
+nrow(penguins)
+```
+
+
+```{r}
+head(penguins)
+```
+
