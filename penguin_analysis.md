@@ -1,15 +1,24 @@
-HW 1
+Penguin Analysis
 ================
 Wayne Monical
 2024-09-20
 
-## Problem 1
+## Loading Data
 
 Here we load the `tidyverse` package and the `penguins` data set from
 the `palmerpenguins` package.
 
 ``` r
 library(tidyverse)
+```
+
+    ## Warning: package 'tidyverse' was built under R version 4.4.2
+
+    ## Warning: package 'ggplot2' was built under R version 4.4.2
+
+    ## Warning: package 'dplyr' was built under R version 4.4.2
+
+``` r
 data("penguins", package = "palmerpenguins")
 ```
 
@@ -35,7 +44,7 @@ ggplot(data = penguins, mapping = aes(x = bill_length_mm, y = flipper_length_mm,
     ## Warning: Removed 2 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-![](p8105_hw1_wem2121_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+![](penguin_analysis_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
 ``` r
 ggsave('penguins_flipper_vs_bill.png')
@@ -46,12 +55,11 @@ ggsave('penguins_flipper_vs_bill.png')
     ## Warning: Removed 2 rows containing missing values or values outside the scale range
     ## (`geom_point()`).
 
-## Problem 2
+## Data Types and Penguin Types
 
-To begin this problem, I will create an example tibble data frame with
-`tidyverse`’s `tibble` function. This example data frame will have four
-columns, one of each data type of numeric, logical, character, and
-factor.
+I will create an example tibble data frame with `tidyverse`’s `tibble`
+function. This example data frame will have four columns, one of each
+data type of numeric, logical, character, and factor.
 
 ``` r
 example_tbl = tibble(
@@ -73,13 +81,13 @@ to take the mean to these vectors.
 example_tbl |> pull(rand_samp) |> mean()
 ```
 
-    ## [1] 0.1030404
+    ## [1] -0.3013563
 
 ``` r
 example_tbl |> pull(log_samp) |> mean()
 ```
 
-    ## [1] 0.5
+    ## [1] 0.4
 
 ``` r
 example_tbl |> pull(char_vec) |> mean()

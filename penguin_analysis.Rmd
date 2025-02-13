@@ -1,12 +1,12 @@
 ---
-title: "HW 1"
+title: "Penguin Analysis"
 author: "Wayne Monical"
 date: "2024-09-20"
 output: github_document
 ---
 
 
-## Problem 1
+## Loading Data
 
 Here we load the `tidyverse` package and the `penguins` data set from the `palmerpenguins` package.
 
@@ -29,9 +29,9 @@ ggsave('penguins_flipper_vs_bill.png')
 ```
 
 
-## Problem 2
+## Data Types and Penguin Types
 
-To begin this problem, I will create an example tibble data frame with `tidyverse`'s `tibble` function. This example data frame will have four columns, one of each data type of numeric, logical, character, and factor. 
+I will create an example tibble data frame with `tidyverse`'s `tibble` function. This example data frame will have four columns, one of each data type of numeric, logical, character, and factor. 
 
 ```{r}
 example_tbl = tibble(
